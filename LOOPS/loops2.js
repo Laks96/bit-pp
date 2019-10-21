@@ -64,4 +64,37 @@ for (i = 0; i < array.length; i++) {
 }
 console.log(prevmin);
 
+/* 5. write a program that calculates the sum of positive elements in the array.
+Input array: [3, 11, -5, -3, 2]
+Output: 16*/
+
+
+var array = [3, 11, -5, -3, 2];
+var result = 0;
+
+for (i = 0; i < array.length; i++) {
+    if (array[i] > 0) {
+        result = array[i] + result;
+    }
+}
+
+console.log(result);
+
+5. /**Write a program that checks if a given array is symmetric. An array is symmetric if it can be read the same way both from the left and the right hand side.   
+Input array: [2, 4, -2, 7, -2, 4, 2]
+Output: The array is symmetric. */
+
+var array = [2, 4, -2, 7, -2, 4, 2];
+
+for (i = 0, b = 6; i < array.length && b < array.length; i++, b--) {
+    if ( array[i] === array[b]) {
+        console.log('Array is symetric')
+    }
+    else {
+        console.log('Array is not symetric')
+    }
+}
+
+
+
 
