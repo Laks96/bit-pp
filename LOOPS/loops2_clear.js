@@ -80,20 +80,76 @@ for (i = 0; i < array.length; i++) {
 
 console.log(result);
 
-5. /**Write a program that checks if a given array is symmetric. An array is symmetric if it can be read the same way both from the left and the right hand side.   
+/** 5. Write a program that checks if a given array is symmetric. An array is symmetric if it can be read the same way both from the left and the right hand side.   
 Input array: [2, 4, -2, 7, -2, 4, 2]
 Output: The array is symmetric. */
 
-var array = [2, 4, -2, 7, -2, 4, 2];
 
-for (i = 0, b = 6; i < array.length && b < array.length; i++, b--) {
-    if ( array[i] === array[b]) {
-        console.log('Array is symetric')
-    }
-    else {
-        console.log('Array is not symetric')
+
+
+/* 9. Write a program that deletes a given element e from the array a. 
+Input: e = 2, a = [4, 6, 2, 8, 2, 2]
+Output array: [4, 6, 8] */
+
+/*var a = [4, 6, 2, 8, 2, 2];
+var e = 2;
+
+for (i = 0; i < a.length; i++) {
+    if (a[i] === e) {
+        delete a[i];
     }
 }
+console.log(a);*/
+
+var a = [4, 6, 2, 8, 2, 2];
+var e = 2;
+var output = [];
+
+for (i = 0; i < a.length; i++) {
+    if (a[i] !== e) {
+        output[output.length] = a[i];
+    }
+}
+
+console.log(output);
+
+/* 10Write a program that inserts a given element e on the given position p in the array a. If the value of the position is greater than the array length, print the error message. 
+Input: e = 78, p = 3, a = [2, -2, 33, 12, 5, 8]
+Output: [2, -2, 33, 78, 12, 5, 8] */
+
+
+var e = 78;
+
+var p = 3;
+
+var a = [2, -2, 33, 12, 5, 8];
+
+var output = [];
+
+for (var i = 0; i < a.length; i++) {
+    if (i === p) {
+        output[output.length] = e;
+    }
+
+    output[output.length] = a[i];
+}
+
+console.log(output);
+
+// Stampaj broj zvezdica u jednom redu srazmeran size-u
+var row = "";
+var size = 3;
+var result = '';
+
+
+
+for (var i = 0; i < size; i++) {
+    row += '*';
+    result = result + row + '\n';
+
+}
+
+console.log(result);
 
 
 
