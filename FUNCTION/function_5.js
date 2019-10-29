@@ -67,6 +67,117 @@ Input:
 Output: 
 Bill acquired 59 points and earned 6. Micahel acquired 50 points and failed to complete the exam.
 */
+function numbers(student, grade) {
+    var c = [];
+    var d = [];
+    for (var i = 0; i < grade.length; i++) {
+        if (grade[i] < 50) {
+            d[i] = 'failed to complete the exam.'
+        }
+
+        else if (grade[i] < 60) {
+            d[i] = 6;
+
+        }
+        else if (grade[i] < 70) {
+            d[i] = 7;
+        }
+        else if (grade[i] < 80) {
+            d[i] = 8;
+        }
+        else if (grade[i] < 90) {
+            d[i] = 9;
+        }
+        else if (grade[i] < 100) {
+            d[i] = 10;
+        }
+    }
+    for (var i = 0; i < student.length; i++) {
+        c[i] = grade[i] + 'had ' + student[i] + 'and that is' + d[i]
+    } return c;
+
+
+}
+
+console.log(numbers(["Micahel", "Anne", "Frank", "Joe", "John", "David", "Mark", "Bill"], [50, 39, 63, 72, 99, 51, 83, 59]));
+
+
+
+/*6. Write a program that uses a loop to add all the even numbers from 1 to 1000 and subtracts all the odd numbers 1 to 500 from the calculated sum.
+The result should then be multiplied by 12.5 and displayed in console.
+Output: 2350000
+*/
+
+function numbers() {
+    var even = 0;
+    for (var i = 0; i < 1000; i++) {
+        if (i % 2 === 0) {
+            even = even + i;
+        }
+    }
+
+    var odd = 0;
+    for (var j = 0; j < 500; j++) {
+        if (j % 2 !== 0) {
+            odd = j + odd;
+        }
+    }
+
+    return (even - odd) * 12.5;
+}
+
+console.log(numbers());
+
+
+
+
+
+function numbers() {
+    var even = 0;
+    var odd = 0;
+
+    for (var i = 0; i < 1000; i++) {
+        if (i % 2 === 0) {
+            even = even + i;
+        }
+
+        if (i % 2 !== 0 && i < 500) {
+            odd = i + odd;
+        }
+    }
+
+    return (even - odd) * 12.5;
+}
+
+console.log(numbers());
+
+/*7. Define a 10 element array. Take the first two letters from every string (that has at least 2 letters) in the array and create a new string from them. Print it out in the console.
+Input: [ "M", "Anne", 12, "Steve", "Joe", "John", "David", "Mark", true, "A" ]*/
+
+function elements(str) {
+    for (i = 0; i < str.length; i++) {
+        if (typeof str[i] === typeof '') {
+            if (str[i].length >= 2) {
+
+                str[i] = str[i][0] + str[i][1]
+
+            }
+        }
+    } return str;
+}
+
+console.log(elements(["M", "Anne", 12, "Steve", "Joe", "John", "David", "Mark", true, "A"]));
+
+
+
+
+
+
+
+
+
+
+
 
 
 
