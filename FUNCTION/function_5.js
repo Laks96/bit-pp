@@ -153,20 +153,97 @@ console.log(numbers());
 
 /*7. Define a 10 element array. Take the first two letters from every string (that has at least 2 letters) in the array and create a new string from them. Print it out in the console.
 Input: [ "M", "Anne", 12, "Steve", "Joe", "John", "David", "Mark", true, "A" ]*/
-
+"use strict"
 function elements(str) {
-    for (i = 0; i < str.length; i++) {
-        if (typeof str[i] === typeof '') {
-            if (str[i].length >= 2) {
+    for (var i = 0; i < str.length; i++) {
+        var element = str[i];
 
-                str[i] = str[i][0] + str[i][1]
-
-            }
+        if (typeof element === 'string' && element.length >= 2) {
+            str[i] = element[0] + element[1];
         }
-    } return str;
+    }
+
+    return str;
 }
 
 console.log(elements(["M", "Anne", 12, "Steve", "Joe", "John", "David", "Mark", true, "A"]));
+
+/* 8.
+Write a program that takes a string and prints its characters out in reversed order in the console.
+Input:  Belgrade Institute of Technology
+Output: ygolonhceT fo etutitsnI edargleB
+*/
+"use strict"
+function word(str) {
+    var res = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+
+        res = res + str[i]
+    }
+    return res;
+}
+console.log(word('Belgrade Institute of Technology'));
+
+
+
+/* 9. Write a program that displays all the combinations of two numbers between 1 and 7.
+Don't display two of the same numbers at the same time.
+Display the number of possible combinations, as well. (E.g. (1.2),(2,1) is allowed, but not (1,1), (2,2)...).*/
+
+
+function combination(numbers) {
+    var comb = "";
+    for (var i = 0; i <= numbers.length; i++) {
+        for (var j = 0; j <= numbers.length; j++) {
+            if (i !== j) {
+
+            }
+        }
+
+
+
+    } return comb;
+}
+
+
+console.log(combination([1, 2, 3, 4, 5, 6, 7]));
+
+
+/* 10. Write a program that checks if the entered number is a prime number (i.e. divisible only by 1 and by itself).
+Input:  17    | 15
+Output: true  | false*/
+
+
+function enterNumber(digit) {
+    for (var i = 2; i < digit; i++) {
+        if (digit % i === 0) {
+            return false
+        }
+    }
+
+    return true;
+
+}
+
+console.log(enterNumber(15));
+
+
+/*11. Check if a given string is a palindrome (spaces are ignored).
+Input:  eye  | Geek  | a nut for a jar of tuna
+Output: true | false | true
+*/
+
+"use strict"
+
+
+
+
+
+
+
+
+
+
 
 
 
