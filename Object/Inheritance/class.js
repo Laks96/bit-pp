@@ -65,3 +65,7 @@ var manager = new Manager('BIT');
 console.log(worker.getData());
 
 console.log(worker.increaseSalary());
+
+
+
+//*/

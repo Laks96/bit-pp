@@ -1,0 +1,37 @@
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #main-wrap {
+            margin-top: 10%;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        
+        input {
+            width: 51%;
+            margin: 20px;
+            padding: 20px;
+        }
+        
+        select {
+            width: 45.5rem;
+        }
+        
+        #submit {
+            width: 45.5rem;
+            color: #fff;
+            background-color: green;
+        }
+        
+        #span1 {
+            margin-right: 43.5rem;
+        }
+        
+        #span2 {
+            margin-right: 39.5rem;
+        }
