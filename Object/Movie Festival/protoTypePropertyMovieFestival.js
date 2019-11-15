@@ -1,7 +1,7 @@
 "use strict"
 
 /**************************STRING PROTOTYPE********************/
-String.prototype.print = function() {
+String.prototype.print = function () {
     console.log('----------');
     console.log(this);
     console.log('----------');
@@ -17,7 +17,7 @@ function Genre(name) {
 
 /**************************************PROTOTYPE**************************/
 
-Genre.prototype.getDataOfGenre = function() {
+Genre.prototype.getDataOfGenre = function () {
     return 'Genre' + ': ' + this.name[0] + this.name[this.name.length - 1]
 }
 
@@ -28,7 +28,7 @@ function Movie(titleOfMovie, genreOfMovie, lengthOfMovie) {
 
 };
 
-Movie.prototype.getData = function() {
+Movie.prototype.getData = function () {
     return this.title + ', ' + this.length + ', ' + this.genre.getDataOfGenre()
 }
 
@@ -43,7 +43,7 @@ function Program(date) {
 
 }
 
-Program.prototype.getProgramLength = function() {
+Program.prototype.getProgramLength = function () {
     var totalLength = 0
     for (var i = 0; i < this.listOfMovies.length; i++) {
         var movie = this.listOfMovies[i]
@@ -53,13 +53,13 @@ Program.prototype.getProgramLength = function() {
 }
 
 
-Program.prototype.addMovie = function(movie) {
+Program.prototype.addMovie = function (movie) {
     this.listOfMovies.push(movie)
     this.numOfMovies += 1
 }
 
 
-Program.prototype.getData = function() {
+Program.prototype.getData = function () {
     var output = this.date + ', ' + ' Program duration:' + this.getProgramLength() + 'min\n'
     for (var i = 0; i < this.listOfMovies.length; i++) {
         var movie = this.listOfMovies[i]
@@ -79,12 +79,12 @@ function Festival(name) {
 
 }
 
-Festival.prototype.addProgram = function(program) {
+Festival.prototype.addProgram = function (program) {
     this.listOfPrograms.push(program);
     this.numberOfAllMovies += 1;
 }
 
-Festival.prototype.getData = function() {
+Festival.prototype.getData = function () {
     var output1 = this.name + ' ' + 'has ' + this.numberOfAllMovies + ' ' + 'movie titles' + '\n';
     for (var i = 0; i < this.listOfPrograms.length; i++) {
         var program = this.listOfPrograms[i];
